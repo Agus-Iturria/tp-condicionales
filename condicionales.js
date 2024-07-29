@@ -16,10 +16,10 @@ if (age > reference_num){
 //3.Crea un bloque de código que compare dos números e imprima en consola un valor booleano.
 let number1 = 3
 let number2 = 2
-let number1_biggest = false
+let number1_bigest = false
 if(number1 > number2){
-    number1_biggest = true
-    console.log(number1_biggest)
+    number1_bigest = true
+    console.log(number1_bigest)
 }
 
 //4.Crea un bloque de código que compare dos nombres, y si ambos son iguales imprima en consola el nombre.
@@ -58,10 +58,11 @@ if (pair_number%2 == 0){
 }
 
 //9.Crea un bloque de código que compare dos números y luego imprima en consola si es positivo o negativo.
-if (negative_number > 0){
-    console.log("numero par")
+let negativeNumber = -2
+if (negativeNumber > 0){
+    console.log("numero positivo")
 }else{
-    console.log("numero impar")
+    console.log("numero negativo")
 }
 
 //10.Crea una función que tome de referencia una variable string cuyo valor sea una letra, y luego imprima en consola si es una vocal o una consonante.
