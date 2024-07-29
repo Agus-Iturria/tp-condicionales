@@ -82,7 +82,7 @@ if (nombre == "Pedro"){
 }
 
 //12.Crea un bloque de código que tome de referencia la nota de un examen y devuelva ‘Estás aprobado’ si la nota es mayor o igual a 7, o ‘Estás desaprobado’ si la nota es menor a 7.
-nota = 8
+let nota = 8
 if (nota >= 7){
     console.log("Estas aprobado")
 }else{
@@ -113,7 +113,6 @@ if(firstNum < 10 && secondNum < 10){
 
 //15.Crea un bloque de código que tome de referencia un número del 1 al 7 y devuelva el día de la semana correspondiente. Por ejemplo: 1 = ‘lunes’.
 let dayNum = 3
-
 if (dayNum == 1){
     console.log("Lunes")
 }else if (dayNum == 2){
@@ -210,9 +209,139 @@ switch(gender){
 //20.Crea un bloque de código que reciba un número del 1 al 10. Utiliza switch para imprimir en consola ‘Uno’, ‘Dos’, ‘Tres’, o ‘Mayor a 3’, según corresponda. 
 let tenNumber = 4
 switch(tenNumber){
-    
+    case 1:
+        console.log("Uno");
+        break;
+    case 2:
+        console.log("Dos");
+        break;
+    case 3:
+        console.log("Tres");
+        break;
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+        console.log("Mayor a 3");
+        break;
 }
 
+//21.Crea un bloque de código que tome de referencia una letra. Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
+let selectLetter = "A"
+switch(selectLetter){
+    case "A":
+    case "E":
+    case "I":
+    case "O":
+    case "U":
+        console.log("Vocal");
+        break;
+    
+    case "Q":
+    case "W":
+    case "R":
+    case "T":
+    case "Y":
+    case "P":
+    case "S":
+    case "D":
+    case "F":
+    case "G":
+    case "H":
+    case "J":
+    case "K":
+    case "L":
+    case "Ñ":
+    case "Z":
+    case "X":
+    case "C":
+    case "V":
+    case "B":
+    case "N":
+    case "M":
+        console.log("Consonante");
+        break;
+    
+    default:
+        console.log("Caracter especial")
+        break;
+}
+
+//22.Crea un bloque de código que tome de referencia un número del 1 al 4. Utiliza switch para imprimir en consola la estación del año correspondiente.
+estacionAño = 2
+switch(estacionAño){
+    case 1:
+        console.log("Verano");
+        break;
+    case 2:
+        console.log("Otoño");
+        break;
+    case 3:
+        console.log("Invierno");
+        break;
+    case 4:
+        console.log("Primavera");
+        break;
+}
+
+//OPERADOR TERNARIO
+//23.Crea un bloque de código que tome de referencia una variable ‘edad’. Utiliza el operador ternario para imprimir en consola si es o no mayor de edad.
+let edad = 26;
+console.log(edad >= 18 ? "Mayor" : "Menor");
+
+//24.Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es par o impar y muestra el resultado en consola.
+let number24 = 15;
+console.log(number24%2 == 0 ? "Par" : "Impar");
+
+//25.Crea un bloque de código que tome de referencia dos números y utilice el operador ternario para determinar cual de los dos es el mayor. Luego imprime en consola el resultado.
+let reference_number1 = 4
+let reference_number2 = 44
+console.log(reference_number1 > reference_number2 ? "Primer numero es mayor" : "Segundo numero es mayor");
+
+//26.Crea un bloque de código que tome de referencia un número del 1 al 7 y utilice el operador ternario para imprimir en consola el día de la semana correspondiente.
+let weeknum = 4
+let week = weeknum == 1 ? "lunes" : 
+weeknum == 2 ? "martes": 
+weeknum == 3 ? "miercoles": 
+weeknum == 4 ? "jueves":
+weeknum == 5 ? "viernes":
+weeknum == 6 ? "sabado" :
+weeknum == 7 ? "domingo" : "no"
+console.log(week)
+
+//27.Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es positivo, negativo o cero e imprime el resultado en consola.
+let reference_number3 = -3
+let positiveOrNegative = reference_number3 < 0 ? "negativo": 
+reference_number3 > 0 ? "positivo" : "cero" 
+console.log(positiveOrNegative)
+
+//28.Crea un bloque de código que tome de referencia un número del 1 al 100 y utilice el operador ternario para determinar si es múltiplo de 3 y 5 para imprimir el resultado en consola.
+let multiplo3y5 = (reference_number2%3 == 0 && reference_number2%5 == 0) ? "Es multiplo de 3 y 5": "No es multiplo de 3 y 5"
+console.log(multiplo3y5)
+
+//PRACTICAS
+//29.Crea un bloque de código que tome de referencia un número del 1 al 100 y, utilizando el tipo de condicional que prefieras, imprimir si es múltiplo de 2, 3 o 5 incluyendo las diferentes combinaciones posibles.
+let reference_number4 = 30
+if (reference_number4%2 == 0){
+    console.log("El numero es multiplo por 2")
+}else if (reference_number4%3 == 0){
+    console.log("El numero es multiplo por 3")
+}else if (reference_number4%5 == 0){
+    console.log("El numero es multiplo por 5")
+}else if (reference_number4%2 == 0 && reference_number4%3 == 0){
+    console.log("El numero es multiplo por 2 y por 3")
+}else if (reference_number4%2 == 0 && reference_number4%5 == 0){
+    console.log("El numero es multiplo por 2 y por 5")
+}else if (reference_number4%3 == 0 && reference_number4%5 == 0){
+    console.log("El numero es multiplo por 3 y por 5")
+}else if (reference_number4%2 == 0 && reference_number4%3 == 0 && reference_number4%5 == 0){
+    console.log("El numero es multiplo por 2, por 3 y por 5")
+}else{
+    console.log("No es multiplo de 2, 3 o 5")
+}
 
 
 
