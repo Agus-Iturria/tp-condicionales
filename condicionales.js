@@ -474,3 +474,58 @@ else{
     console.log("El numero es igual a 0")
 }
 
+//6)Definir una variable "edadPersona" y devolver "Menor de edad" si la edad es menor de 18, y "Mayor de edad" si es 18 o mayor.
+let edadPersona = 18
+if(edadPersona >=18){
+    console.log("Mayor de edad")
+}
+else{
+    console.log("Menor de edad")
+}
+
+//7)Definir la variable "notaAlumno" y si la nota es 9 o más, devuelve "Sobresaliente". Si es entre 8 y 7, devuelve "Muy Bien". Si es 6, devuelve "Bien". Si es entre 5 y 4, devuelve "Regular". Si es menor de 4, devuelve "Insuficiente".
+let notaAlumno = 7
+switch(notaAlumno){
+    case 10:
+    case 9:
+        console.log("Sobresaliente");
+        break;
+    case 8:
+    case 7:
+        console.log("Muy bien")
+        break;
+    case 6:
+        console.log("Bien")
+        break;
+    case 5:
+    case 4:
+        console.log("Regular")
+        break;
+    default:
+        console.log("Insuficiente")
+        break;
+}
+
+//8)Definir la variable "ingreso" donde si este es menor de 100, el impuesto es del 10%. Si es entre 100 y 200, el impuesto es del 15%. Si es mayor de 200, el impuesto es del 20%.
+let ingreso = 120
+let impuesto = 0
+if (ingreso < 100){
+    impuesto = ((10*ingreso)/100)
+}
+else if(ingreso>=100 && ingreso<=200){
+    impuesto = ((15*ingreso)/100)
+}
+else{
+    impuesto = ((20*ingreso)/100)
+}
+console.log(impuesto)
+
+//9) Pedir dos números y decir si non múltiplos o no
+if (numA%numB == 0 || numB%numA == 0){
+    console.log("Son  multiplos")
+}
+else{
+    console.log("No son multiplos")
+}
+
+//10) 
