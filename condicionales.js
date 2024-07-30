@@ -271,8 +271,8 @@ switch(selectLetter){
 }
 
 //22.Crea un bloque de código que tome de referencia un número del 1 al 4. Utiliza switch para imprimir en consola la estación del año correspondiente.
-estacionAño = 2
-switch(estacionAño){
+estacionAnio = 2
+switch(estacionAnio){
     case 1:
         console.log("Verano");
         break;
@@ -325,24 +325,152 @@ console.log(multiplo3y5)
 //PRACTICAS
 //29.Crea un bloque de código que tome de referencia un número del 1 al 100 y, utilizando el tipo de condicional que prefieras, imprimir si es múltiplo de 2, 3 o 5 incluyendo las diferentes combinaciones posibles.
 let reference_number4 = 30
-if (reference_number4%2 == 0){
-    console.log("El numero es multiplo por 2")
-}else if (reference_number4%3 == 0){
-    console.log("El numero es multiplo por 3")
-}else if (reference_number4%5 == 0){
-    console.log("El numero es multiplo por 5")
-}else if (reference_number4%2 == 0 && reference_number4%3 == 0){
-    console.log("El numero es multiplo por 2 y por 3")
-}else if (reference_number4%2 == 0 && reference_number4%5 == 0){
-    console.log("El numero es multiplo por 2 y por 5")
-}else if (reference_number4%3 == 0 && reference_number4%5 == 0){
-    console.log("El numero es multiplo por 3 y por 5")
-}else if (reference_number4%2 == 0 && reference_number4%3 == 0 && reference_number4%5 == 0){
-    console.log("El numero es multiplo por 2, por 3 y por 5")
-}else{
-    console.log("No es multiplo de 2, 3 o 5")
+if (reference_number4%2 == 0  || reference_number4%3 == 0 || reference_number4%5 == 0){
+    if (reference_number4%2 == 0){
+        if (reference_number4%2 == 0 && reference_number4%3 == 0 && reference_number4%5 == 0){
+            console.log("El numero es multiplo de 2, 3 y 5")
+        }
+        else if (reference_number4%2 == 0 && reference_number4%3 == 0){
+            console.log("El numero es multiplo de 2 y 3")
+        }
+        else if (reference_number4%2 == 0 && reference_number4%5 == 0){
+            console.log("El numero es multiplo de 2 y de 5")
+        }
+        else {
+            console.log("El numero es multiplo de 2")
+        }
+    }
+    else if (reference_number4%3 == 0){
+        if (reference_number4%3 == 0 && reference_number4%5 == 0){
+            console.log("El numero es multiplo de 3 y 5")
+        }
+
+    }
+    else if  (reference_number4%5 ==  0){
+        console.log("El numero es multiplo de 5")
+    }
+
+    else{
+        console.log("El numero no es multiplo ni de 2, 3 ni 5")
+    }
+
 }
 
+//30.Crea un bloque de código que reciba un numero del 1 al 1000. Utiliza el tipo de condicional que prefieras para imprimir en consola si el numero es par o impar, si es divisible por 2, por 3 o por 5, y si es mayor o menor a 50.
+let reference_number5 = 55
+let oddEven = ""
+let divisible = ""
+let fifty = ""
+if (reference_number5%2 == 0){
+    oddEven = "Par"
+    if (reference_number5 > 50){
+        fifty = "mayor a 50"
+        if (reference_number5%2 == 0){
+            divisible = "2"
+        }
+        else if (reference_number5%3 == 0){
+            divisible = "3"
+        }
+        else if (reference_number5%5 == 0){
+            divisible = "5"
+        }
+    }
+    else{
+        fifty = "menor a 50"
+        if (reference_number5%2 == 0){
+            divisible = "2"
+        }
+        else if (reference_number5%3 == 0){
+            divisible = "3"
+        }
+        else if (reference_number5%5 == 0){
+            divisible = "5"
+        }
+    }
+}
+else{
+    oddEven = "Impar"
+    if (reference_number5 > 50){
+        fifty = "mayor a 50"
+        if (reference_number5%2 == 0){
+            divisible = "2"
+        }
+        else if (reference_number5%3 == 0){
+            divisible = "3"
+        }
+        else if (reference_number5%5 == 0){
+            divisible = "5"
+        }
+    }
+    else{
+        fifty = "menor a 50"
+        if (reference_number5%2 == 0){
+            divisible = "2"
+        }
+        else if (reference_number5%3 == 0){
+            divisible = "3"
+        }
+        else if (reference_number5%5 == 0){
+            divisible = "5"
+        }
+    }
+}
+console.log("El numero es " + oddEven + " es divisible por " + divisible + " y es " + fifty)
 
-
+//31.Desarrolla 10 nuevas situaciones en donde requieras de utilizar condicionales para su resolución.
+//1) Pedir un numero, devolver si es par o impar y si es mayor o menor a 32
+let num = 12
+if (num%2 == 0){
+    if(num > 32){
+        console.log("El numero es par y mayor a 32")
+    }
+    else{
+        console.log("El numero es par y menor a 32")
+    }
+}
+else{
+    if(num > 32){
+        console.log("El numero es impar y mayor a 32")
+    }
+    else{
+        console.log("El numero es impar y menor a 32")
+    }
+}
+//2) Definir una variable que sea "Bicicleta", "Tren", "Colectivo"  o "Auto". Si se va en "Tren" o "Colectivo" que devuelva un mensaje recorndado llevar la Sube
+let travel = "colectivo"
+switch(travel){
+    case "colectivo":
+    case "tren":
+        console.log("Recordà llevar la Sube!");
+        break;
+    default:
+        console.log("Buen viaje!");
+        break;
+}
+//3) Definir dos variables con dos numeros y devolver la diferencia entre el mayor y el menor
+let numA = 8
+let numB = 5
+if (numA > numB){
+    console.log(numA - numB)
+}
+else{
+    console.log(numB - numA)
+}
+//4) Se piden dos numeros enteros y devolver la multiplicaciòn de ambos. Si alguno de los numeros es 0 que devuelva "ERROR"
+if (numA == 0 || numB == 0){
+    console.log("ERROR")
+}
+else{
+    console.log(numA * numB)
+}
+//5) Crear un script que solicite un numero y diga si es negaivo, positivo o igual a 0
+if (numA < 0){
+    console.log("El numero es negativo")
+}
+else if (numA > 0){
+    console.log("El  numero es positivo")
+}
+else{
+    console.log("El numero es igual a 0")
+}
 
